@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layout Structure</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="GDG_project.css">
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <div class="nav-logo border">
+                <div class="logo"></div>
+            </div>
+
+            <div class="nav-name border">
+                <p class="newie-f">Google Developer Groups</p>
+            </div>
+
+            <div class="nav-search">
+                <select class="search-select" id="nav-select" onchange="navigateToLink()">
+                    <option value="#">About</option>
+                    <option value="https://developers.google.com/community/gdg">About Us</option>
+                    <option value="https://developers.google.com/community-guidelines">Community Guidelines</option>
+                    <option value="https://gdg.community.dev/ioextended/">I/O Extended</option>
+                    <option value="https://developers.google.com/community/gdg/stories">Stories</option>
+                    <option value="https://developers.google.com/community/gdg/organizers">Organizers</option>
+                </select>
+            </div>
+            
+            <script>
+            function navigateToLink() {
+                var selectElement = document.getElementById("nav-select");
+                var selectedValue = selectElement.value;
+                
+                if (selectedValue !== "#") {
+                    window.location.href = selectedValue;
+                }
+            }
+            </script>
+
+            <div class="nav-options">
+                <p><a href="https://gdg.community.dev/chapters/"</a>Chapters</p>
+                <p><a href="https://gdg.community.dev/events/#/list"</a>Upcoming Events</p>
+            </div>
+
+            <div class="button-login">
+                <a href="https://accounts.google.com/o/oauth2/auth/oauthchooseaccount?client_id=857409878587-31uohbmvtm297gt2mg3ufr8qknbohi0s.apps.googleusercontent.com&redirect_uri=https%3A%2F%2Fgdg.community.dev%2Faccounts%2Fgoogle%2Flogin%2Fcallback%2F&scope=profile%20email&response_type=code&state=2NPenC1f6C2a&access_type=offline&service=lso&o2v=1&ddm=1&flowName=GeneralOAuthFlow" class="login-btn">Log in</a>
+            </div>
+        </div>
+        <div class="panel-gdg">
+            <img src="GDG LOGO.jpg" class="centered-img">
+        </div>
+    </header>
+
+        <div class="about-gdg">
+            <img src="GDGbackg.jpg" class="about-us">
+            <div class="overlay-text"><a href="https://developers.google.com/community/gdg">GDG on Campus ITM (SLS) Baroda University - Vadodara, India<br><br>ABOUT US</a></div>
+        </div>
+
+        <div class="carousel">
+            <div class="carousel-images">
+                <img src="Img1.jpg" alt="Image 1" class="carousel-image active">
+                <img src="Img2.jpg" alt="Image 2" class="carousel-image">
+                <img src="Img3.jpg" alt="Image 3" class="carousel-image">
+            </div>
+            <button class="prev" onclick="changeSlide(-1)">&#10094;</button>
+            <button class="next" onclick="changeSlide(1)">&#10095;</button>
+        </div>
+
+        <script src="script.js"></script>
+
+    <footer>
+        <div class="foot-panel1">
+            <a href="file:///C:/Users/MAHEE%20MEHTA/OneDrive/Desktop/GDG/GDG_project.html">Back To Top</a>
+        </div>
+
+        <div class="foot-panel2">
+            <ul>
+                <p>Quick Links</p>
+                <a href="https://developers.google.com/community/gdg">About GDG</a>
+                <a href="https://gdg.community.dev/chapters/">Chapters</a>
+                <a href="https://gdg.community.dev/events/#/list">Upcoming Events</a>
+                <a href="https://gdg.community.dev/participation-terms/">Participation Terms</a>
+                <a href="https://policies.google.com/privacy">Privacy</a>
+                <a href="https://policies.google.com/terms">Terms</a>
+                <a href="https://gdg.community.dev/gdg-program-terms-conditions/">Organizer Terms & Conditions</a>
+            </ul>
+            <ul>
+                <p>Social</p>
+                <div class="social-icons">
+                    <a href="https://www.instagram.com/maheee.mehta?igsh=YTg1N3RzbHU2dTI3" target="_blank" class="fa fa-instagram"></a>
+                    <a href="https://www.facebook.com/devansh.5757?mibextid=9R9pXO" target="_blank" class="fa fa-x"></a>
+                    <a href="https://www.linkedin.com/in/mahee-mehta-4a69042a2?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" class="fa fa-linkedin"></a>
+                </div>
+            </ul>
+        </div>
+        <div class="foot-panel3">
+            <div class="copyright">
+                ©2024 Google . Upcoming Events
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
